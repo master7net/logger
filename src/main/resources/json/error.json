@@ -1,0 +1,251 @@
+{
+  "_id" : ObjectId("56a0878c45681f664ac04cac"),
+  "timestamp" : ISODate("2016-01-21T07:23:56.991Z"),
+  "level" : "ERROR",
+  "thread" : "pool-2-thread-1",
+  "message" : "Unexpected error occurred in scheduled task.",
+  "loggerName" : {
+    "fullyQualifiedClassName" : "org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler",
+    "package" : [
+      "org",
+      "springframework",
+      "scheduling",
+      "support",
+      "TaskUtils$LoggingErrorHandler"
+    ],
+    "className" : "TaskUtils$LoggingErrorHandler"
+  },
+  "fileName" : "TaskUtils.java",
+  "method" : "handleError",
+  "lineNumber" : "95",
+  "class" : {
+    "fullyQualifiedClassName" : "org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler",
+    "package" : [
+      "org",
+      "springframework",
+      "scheduling",
+      "support",
+      "TaskUtils$LoggingErrorHandler"
+    ],
+    "className" : "TaskUtils$LoggingErrorHandler"
+  },
+  "throwables" : [
+    {
+      "message" : "/ by zero",
+      "stackTrace" : [
+        {
+          "fileName" : "ScheduledService.java",
+          "method" : "reportCurrentTime",
+          "lineNumber" : 23,
+          "class" : {
+            "fullyQualifiedClassName" : "logcore.service.ScheduledService",
+            "package" : [
+              "logcore",
+              "service",
+              "ScheduledService"
+            ],
+            "className" : "ScheduledService"
+          }
+        },
+        {
+          "fileName" : "NativeMethodAccessorImpl.java",
+          "method" : "invoke0",
+          "lineNumber" : -2,
+          "class" : {
+            "fullyQualifiedClassName" : "sun.reflect.NativeMethodAccessorImpl",
+            "package" : [
+              "sun",
+              "reflect",
+              "NativeMethodAccessorImpl"
+            ],
+            "className" : "NativeMethodAccessorImpl"
+          }
+        },
+        {
+          "fileName" : "NativeMethodAccessorImpl.java",
+          "method" : "invoke",
+          "lineNumber" : 62,
+          "class" : {
+            "fullyQualifiedClassName" : "sun.reflect.NativeMethodAccessorImpl",
+            "package" : [
+              "sun",
+              "reflect",
+              "NativeMethodAccessorImpl"
+            ],
+            "className" : "NativeMethodAccessorImpl"
+          }
+        },
+        {
+          "fileName" : "DelegatingMethodAccessorImpl.java",
+          "method" : "invoke",
+          "lineNumber" : 43,
+          "class" : {
+            "fullyQualifiedClassName" : "sun.reflect.DelegatingMethodAccessorImpl",
+            "package" : [
+              "sun",
+              "reflect",
+              "DelegatingMethodAccessorImpl"
+            ],
+            "className" : "DelegatingMethodAccessorImpl"
+          }
+        },
+        {
+          "fileName" : "Method.java",
+          "method" : "invoke",
+          "lineNumber" : 497,
+          "class" : {
+            "fullyQualifiedClassName" : "java.lang.reflect.Method",
+            "package" : [
+              "java",
+              "lang",
+              "reflect",
+              "Method"
+            ],
+            "className" : "Method"
+          }
+        },
+        {
+          "fileName" : "ScheduledMethodRunnable.java",
+          "method" : "run",
+          "lineNumber" : 65,
+          "class" : {
+            "fullyQualifiedClassName" : "org.springframework.scheduling.support.ScheduledMethodRunnable",
+            "package" : [
+              "org",
+              "springframework",
+              "scheduling",
+              "support",
+              "ScheduledMethodRunnable"
+            ],
+            "className" : "ScheduledMethodRunnable"
+          }
+        },
+        {
+          "fileName" : "DelegatingErrorHandlingRunnable.java",
+          "method" : "run",
+          "lineNumber" : 54,
+          "class" : {
+            "fullyQualifiedClassName" : "org.springframework.scheduling.support.DelegatingErrorHandlingRunnable",
+            "package" : [
+              "org",
+              "springframework",
+              "scheduling",
+              "support",
+              "DelegatingErrorHandlingRunnable"
+            ],
+            "className" : "DelegatingErrorHandlingRunnable"
+          }
+        },
+        {
+          "fileName" : "Executors.java",
+          "method" : "call",
+          "lineNumber" : 511,
+          "class" : {
+            "fullyQualifiedClassName" : "java.util.concurrent.Executors$RunnableAdapter",
+            "package" : [
+              "java",
+              "util",
+              "concurrent",
+              "Executors$RunnableAdapter"
+            ],
+            "className" : "Executors$RunnableAdapter"
+          }
+        },
+        {
+          "fileName" : "FutureTask.java",
+          "method" : "runAndReset",
+          "lineNumber" : 308,
+          "class" : {
+            "fullyQualifiedClassName" : "java.util.concurrent.FutureTask",
+            "package" : [
+              "java",
+              "util",
+              "concurrent",
+              "FutureTask"
+            ],
+            "className" : "FutureTask"
+          }
+        },
+        {
+          "fileName" : "ScheduledThreadPoolExecutor.java",
+          "method" : "access$301",
+          "lineNumber" : 180,
+          "class" : {
+            "fullyQualifiedClassName" : "java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask",
+            "package" : [
+              "java",
+              "util",
+              "concurrent",
+              "ScheduledThreadPoolExecutor$ScheduledFutureTask"
+            ],
+            "className" : "ScheduledThreadPoolExecutor$ScheduledFutureTask"
+          }
+        },
+        {
+          "fileName" : "ScheduledThreadPoolExecutor.java",
+          "method" : "run",
+          "lineNumber" : 294,
+          "class" : {
+            "fullyQualifiedClassName" : "java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask",
+            "package" : [
+              "java",
+              "util",
+              "concurrent",
+              "ScheduledThreadPoolExecutor$ScheduledFutureTask"
+            ],
+            "className" : "ScheduledThreadPoolExecutor$ScheduledFutureTask"
+          }
+        },
+        {
+          "fileName" : "ThreadPoolExecutor.java",
+          "method" : "runWorker",
+          "lineNumber" : 1142,
+          "class" : {
+            "fullyQualifiedClassName" : "java.util.concurrent.ThreadPoolExecutor",
+            "package" : [
+              "java",
+              "util",
+              "concurrent",
+              "ThreadPoolExecutor"
+            ],
+            "className" : "ThreadPoolExecutor"
+          }
+        },
+        {
+          "fileName" : "ThreadPoolExecutor.java",
+          "method" : "run",
+          "lineNumber" : 617,
+          "class" : {
+            "fullyQualifiedClassName" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+            "package" : [
+              "java",
+              "util",
+              "concurrent",
+              "ThreadPoolExecutor$Worker"
+            ],
+            "className" : "ThreadPoolExecutor$Worker"
+          }
+        },
+        {
+          "fileName" : "Thread.java",
+          "method" : "run",
+          "lineNumber" : 745,
+          "class" : {
+            "fullyQualifiedClassName" : "java.lang.Thread",
+            "package" : [
+              "java",
+              "lang",
+              "Thread"
+            ],
+            "className" : "Thread"
+          }
+        }
+      ]
+    }
+  ],
+  "host" : {
+    "process" : "10672@PC-308198",
+    "name" : "PC-308198",
+    "ip" : "10.10.4.75"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id" : ObjectId("56a0e86c4568ae705f398087"),
+  "timestamp" : ISODate("2016-01-21T14:17:16.204Z"),
+  "level" : "TRACE",
+  "thread" : "main",
+  "message" : "Condition OnWebApplicationCondition on org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration matched due to found web application StandardServletEnvironment",
+  "loggerName" : {
+    "fullyQualifiedClassName" : "org.springframework.boot.autoconfigure.condition.OnWebApplicationCondition",
+    "package" : [
+      "org",
+      "springframework",
+      "boot",
+      "autoconfigure",
+      "condition",
+      "OnWebApplicationCondition"
+    ],
+    "className" : "OnWebApplicationCondition"
+  },
+  "fileName" : "SpringBootCondition.java",
+  "method" : "logOutcome",
+  "lineNumber" : "92",
+  "class" : {
+    "fullyQualifiedClassName" : "org.springframework.boot.autoconfigure.condition.SpringBootCondition",
+    "package" : [
+      "org",
+      "springframework",
+      "boot",
+      "autoconfigure",
+      "condition",
+      "SpringBootCondition"
+    ],
+    "className" : "SpringBootCondition"
+  },
+  "host" : {
+    "process" : "14236@PC-308198",
+    "name" : "PC-308198",
+    "ip" : "10.10.4.75"
+  }
+}

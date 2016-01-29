@@ -1,0 +1,41 @@
+    <div layout="row">
+                    <div flex>
+                            <md-select class="thread" ng-model="thread" md-on-open="loadThreads()" ng-change="reloadLog()">
+			        		    <md-option ng-value="thread" ng-repeat="thread in threads">{{thread}}</md-option>
+				            </md-select>
+                    </div>
+                    <div flex>
+                        <md-select ng-model="level" md-on-open="loadLevels()" ng-change="reloadLog()">
+					        <md-option ng-value="level" ng-repeat="level in levels">{{level}}</md-option>
+				        </md-select>
+                    </div>
+                    <div flex>
+                        <md-switch ng-model="autoScrolling" aria-label="AutoScroll switch">
+                             Autoscrolling
+                        </md-switch>
+                    </div>
+                    <div flex>
+                        <md-button md-no-ink class="md-primary" ng-click="clearConsole()">CLEAR</md-button>
+                    </div>
+                    <div flex>
+                        <a href="/logout">LOGOUT</a>
+                    </div>
+    </div>
+
+	<div layout="row">
+	  <div flex="100">
+			<md-input-container class="toolbar-element">
+							<label>Search</label>
+							<input ng-model="grep" ng-change="reloadLog()">
+			</md-input-container>
+	  </div>
+    </div>
+    <div layout="row" flex>
+        <div layout="column" flex id="content">
+            <md-button md-no-ink class="md-primary" ng-click="moreConsole()">MORE</md-button>
+            <md-content id="console"></md-content>
+            <div layout="row" layout-align="center center">
+                <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,33 @@
+{
+  "_id" : ObjectId("569f9bd4456861d6f14a9c6c"),
+  "timestamp" : ISODate("2016-01-20T14:38:12.508Z"),
+  "level" : "DEBUG",
+  "thread" : "http-nio-8181-exec-2",
+  "message" : "Responce objects: 14492",
+  "loggerName" : {
+    "fullyQualifiedClassName" : "logcore.web.LogController",
+    "package" : [
+      "logcore",
+      "web",
+      "LogController"
+    ],
+    "className" : "LogController"
+  },
+  "fileName" : "LogController.java",
+  "method" : "getLogList",
+  "lineNumber" : "60",
+  "class" : {
+    "fullyQualifiedClassName" : "logcore.web.LogController",
+    "package" : [
+      "logcore",
+      "web",
+      "LogController"
+    ],
+    "className" : "LogController"
+  },
+  "host" : {
+    "process" : "7428@PC-308198",
+    "name" : "PC-308198",
+    "ip" : "10.10.4.75"
+  }
+}

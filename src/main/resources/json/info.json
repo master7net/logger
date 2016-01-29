@@ -1,0 +1,33 @@
+{
+  "_id" : ObjectId("56a0958845680f301cf07f44"),
+  "timestamp" : ISODate("2016-01-21T08:23:36.682Z"),
+  "level" : "INFO",
+  "thread" : "pool-2-thread-1",
+  "message" : "The time is now 10:23:36",
+  "loggerName" : {
+    "fullyQualifiedClassName" : "logcore.service.ScheduledService",
+    "package" : [
+      "logcore",
+      "service",
+      "ScheduledService"
+    ],
+    "className" : "ScheduledService"
+  },
+  "fileName" : "ScheduledService.java",
+  "method" : "reportCurrentTime",
+  "lineNumber" : "20",
+  "class" : {
+    "fullyQualifiedClassName" : "logcore.service.ScheduledService",
+    "package" : [
+      "logcore",
+      "service",
+      "ScheduledService"
+    ],
+    "className" : "ScheduledService"
+  },
+  "host" : {
+    "process" : "10220@PC-308198",
+    "name" : "PC-308198",
+    "ip" : "10.10.4.75"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id" : ObjectId("569f50014568c25ad4164d06"),
+  "timestamp" : ISODate("2016-01-20T09:14:41.155Z"),
+  "level" : "WARN",
+  "thread" : "http-nio-8181-exec-9",
+  "message" : "Request method 'POST' not supported",
+  "loggerName" : {
+    "fullyQualifiedClassName" : "org.springframework.web.servlet.PageNotFound",
+    "package" : [
+      "org",
+      "springframework",
+      "web",
+      "servlet",
+      "PageNotFound"
+    ],
+    "className" : "PageNotFound"
+  },
+  "fileName" : "DefaultHandlerExceptionResolver.java",
+  "method" : "handleHttpRequestMethodNotSupported",
+  "lineNumber" : "208",
+  "class" : {
+    "fullyQualifiedClassName" : "org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver",
+    "package" : [
+      "org",
+      "springframework",
+      "web",
+      "servlet",
+      "mvc",
+      "support",
+      "DefaultHandlerExceptionResolver"
+    ],
+    "className" : "DefaultHandlerExceptionResolver"
+  },
+  "host" : {
+    "process" : "7812@PC-308198",
+    "name" : "PC-308198",
+    "ip" : "10.10.4.75"
+  }
+}

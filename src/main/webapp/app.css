@@ -1,0 +1,36 @@
+ body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+				zoom: 0.8;
+            }
+ .loginBox {
+     align: center;
+     margin-top: 200px;
+     width: 300px;
+ }
+ .log {
+    margin-top: 20px;
+ }
+ .bold {
+     font-weight: 700;
+ }
+ .log div {
+     margin-right: 20px;
+ }
+ .level {
+     font-weight: 700;
+     width: 70px;
+ }
+.thread {
+    min-width: 150px;
+}
+.selectdemoBasicUsage md-input-container {
+  margin-right: 10px;
+}
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}

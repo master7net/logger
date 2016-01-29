@@ -1,0 +1,16 @@
+<div ng-controller="LoginCtrl">
+    <div layout="row" layout-align="center center">
+        <div layout="column" class="loginBox">
+            <h1>Login</h1>
+            <md-input-container>
+                <label>Login</label>
+                <input ng-model="username" ng-enter="doLogin()">
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="password" ng-enter="doLogin()">
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click="doLogin()">LOGIN</md-button>
+        </div>
+    </div>
+</div>
