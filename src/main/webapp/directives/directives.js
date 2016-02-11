@@ -10,3 +10,24 @@ app.directive('ngEnter', function() {
             });
         };
     });
+
+app.directive('inputstyle', function () {
+       return {
+               link: function(scope, element, attributes){
+               element.css('color', '#fff'),
+               element.css('font-weight', '100'),
+               element.css('border-bottom-color', '#ffffff');
+             }
+        }
+   });
+
+app.directive('selectstyle', function () {
+       return {
+               link: function(scope, element, attributes){
+               element.css('color', '#fff'),
+               element.css('font-weight', '100'),
+               element.css('background', '#1e1e1e');
+               element.css('border-bottom-color', '#ffffff');
+             }
+        }
+   });

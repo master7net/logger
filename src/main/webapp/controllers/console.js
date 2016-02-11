@@ -8,10 +8,18 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
         $scope.limit = 50;
         $scope.refresh = 0;
         $scope.skip = 0;
+        $scope.autoScrolling = true;
+        $scope.levels =  [
+                            'ALL',
+                            'FATAL',
+                            'ERROR',
+                            'WARN',
+                            'INFO',
+                            'DEBUG',
+                            'TRACE'
+                          ];
 
         $scope.load = function() {
-
-               console.log($scope.limit);
 
              if (!$scope.block) {
 
@@ -41,9 +49,9 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
                         logNode.setAttribute("class", "log");
 
                         var timeNode = document.createElement("div");
-                        timeNode.setAttribute("flex", "10");
+                        timeNode.setAttribute("class", "time");
                         timeNode.innerHTML =
-                            message.timestamp.dayOfYear + '.' +
+                            message.timestamp.dayOfMonth + '.' +
                             message.timestamp.month.toLowerCase() + '.' +
                             message.timestamp.year + ' ' +
                             message.timestamp.hour + ':' +
@@ -68,30 +76,36 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
 
                         collumnNode.appendChild(rowNode);
 
-                        if (message.level != "ERROR") {
-                            var messageNode = document.createElement("div");
-                            messageNode.innerHTML = message.message;
-                            collumnNode.appendChild(messageNode);
+                        var messageNode = document.createElement("div");
+                        messageNode.innerHTML = message.message;
+                        if (message.message.length < 40) {
+                            rowNode.appendChild(messageNode);
+                            logNode.appendChild(collumnNode);
+                            document.getElementById('console').appendChild(logNode);
+                        }
+                        else {
+                            logNode.appendChild(collumnNode);
+                            messageNode.setAttribute("class", "data");
+                            document.getElementById('console').appendChild(logNode);
+                            document.getElementById('console').appendChild(messageNode);
                         }
 
-                        angular.forEach(message.throwables,function(throwable,throwablesIndex){
+
+                        angular.forEach(message.throwables, function(throwable, throwablesIndex){
 
                             var throwableNode = document.createElement("div");
+                            throwableNode.setAttribute("class", "data");
                             throwableNode.innerHTML = throwable.message;
-                            throwableNode.setAttribute("class", "bold");
-                            collumnNode.appendChild(throwableNode);
+                            document.getElementById('console').appendChild(throwableNode);
 
-                            angular.forEach(throwable.stackTrace,function(stackTrace,stackTraceIndex){
+                            angular.forEach(throwable.stackTrace,function(stackTrace, stackTraceIndex){
                                 var stackTraceNode = document.createElement("div");
+                                stackTraceNode.setAttribute("class", "data");
                                 stackTraceNode.innerHTML = stackTrace.className.fullyQualifiedClassName + "." + stackTrace.method + ":" + stackTrace.lineNumber + " (" + stackTrace.fileName + ")<br />";
-                                collumnNode.appendChild(stackTraceNode);
+                                document.getElementById('console').appendChild(stackTraceNode);
                             });
 
                         });
-
-                        logNode.appendChild(collumnNode);
-
-                        document.getElementById('console').appendChild(logNode);
 
                         if ($scope.autoScrolling) {
                             window.scrollTo(0, document.body.scrollHeight);
@@ -107,25 +121,6 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
                 $scope.load();
         }, 1000);
 
-
-        $scope.loadThreads = function() {
-               $http.get('/rest/threads/').success(function(data) {
-                    $scope.threads = data;
-               });
-        }
-
-        $scope.loadLevels = function() {
-                $scope.levels =  [
-                    '',
-                    'FATAL',
-                    'ERROR',
-                    'WARN',
-                    'INFO',
-                    'DEBUG',
-                    'TRACE'
-                  ];
-        }
-
         $scope.reloadLog = function() {
             document.getElementById('console').innerHTML = '';
             $scope.refresh = 1;
@@ -137,10 +132,14 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
             $scope.limit = 50;
         }
 
-        $scope.moreConsole = function() {
+        $scope.more = function() {
             document.getElementById('console').innerHTML = '';
+            $scope.autoScrolling = false;
             $scope.refresh = 1;
             $scope.limit = $scope.limit + 50;
             $scope.load();
+        }
+        $scope.exit = function() {
+            window.location.href = '/logout';
         }
 }]);

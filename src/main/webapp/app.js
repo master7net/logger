@@ -22,4 +22,6 @@ app.config(['$routeProvider',
         otherwise({
             redirectTo: '/login'
         });
-    }]);
+    }
+
+    ]);
