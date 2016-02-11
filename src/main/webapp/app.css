@@ -6,9 +6,12 @@
     background: #1e1e1e;
 }
 #main {
-    margin-top: 250px;
+    margin-top: 70px;
 }
 .more {
+    text-align:center;
+}
+.moreicon {
     cursor: pointer;
 }
 .icon {

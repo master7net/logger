@@ -1,49 +1,36 @@
 <div id="header" layout="row">
-
-    <div class="icon">
-             <i class="material-icons md-36">search</i>
-    </div>
-
-    <div flex="75">
+    <div flex="70">
         <md-input-container class="toolbar-element">
-            <label inputstyle>Search</label>
-            <input inputstyle ng-model="grep" ng-change="reloadLog()">
+            <label nginputstyle><i class="material-icons md-24">search</i></label>
+            <input nginputstyle ng-model="grep" ng-change="reloadLog()">
         </md-input-container>
     </div>
-
-    <div>
-        <md-select selectstyle ng-model="level" ng-change="reloadLog()">
-            <md-option selectstyle ng-value="level" ng-repeat="level in levels">{{level}}</md-option>
+    <div flex="10">
+        <md-select ngselectstyle ng-model="level" ng-change="reloadLog()">
+            <md-option ngselectstyle ng-value="level" ng-repeat="level in levels">{{level}}</md-option>
         </md-select>
     </div>
-
-    <div>
+    <div flex="10">
         <md-switch ng-model="autoScrolling" aria-label="AutoScroll switch">
             Autoscroll
         </md-switch>
     </div>
-
-
-    <div>
+    <div flex="5">
         <md-button ng-click="clearConsole()">
             <i class="material-icons md-36">clear_all</i>
         </md-button>
     </div>
-
-    <div>
+    <div flex="5">
         <md-button ng-click="exit()">
             <i class="material-icons md-36">exit_to_app</i>
         </md-button>
     </div>
-
 </div>
-
 <div id="main" flex="100">
-    <div flex="100" layout-align="center start">
-        <div clas="more">
+    <div class="more" flex="100">
+        <div class="moreicon">
             <i class="material-icons md-36" ng-click="more()">more_horiz</i>
         </div>
     </div>
     <div id="console"></div>
 </div>
-

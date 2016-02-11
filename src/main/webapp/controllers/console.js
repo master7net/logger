@@ -3,7 +3,7 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
 
         $scope.block = false;
         $scope.thread = '';
-        $scope.level = '';
+        $scope.level = 'ALL';
         $scope.grep = '';
         $scope.limit = 50;
         $scope.refresh = 0;

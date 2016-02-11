@@ -11,7 +11,7 @@ app.directive('ngEnter', function() {
         };
     });
 
-app.directive('inputstyle', function () {
+app.directive('nginputstyle', function () {
        return {
                link: function(scope, element, attributes){
                element.css('color', '#fff'),
@@ -21,7 +21,7 @@ app.directive('inputstyle', function () {
         }
    });
 
-app.directive('selectstyle', function () {
+app.directive('ngselectstyle', function () {
        return {
                link: function(scope, element, attributes){
                element.css('color', '#fff'),
