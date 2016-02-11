@@ -98,7 +98,7 @@ public class LoggerDAO {
                     .is(loggerRequest.getThreadName());
         }
         if (!loggerRequest.getGrep().isEmpty()) {
-            criteria.and("message").regex(loggerRequest.getGrep(), "i");
+            criteria.and("loggerName.fullyQualifiedClassName").regex(loggerRequest.getGrep(), "i");
         }
 
         return criteria;
