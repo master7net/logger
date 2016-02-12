@@ -1,6 +1,6 @@
 package logcore.web.controller;
 
-import logcore.domain.LoggerMessage;
+import logcore.domain.log.LoggerMessage;
 import logcore.dto.LoggerRequest;
 import logcore.service.LoggerService;
 import logcore.service.SessionService;

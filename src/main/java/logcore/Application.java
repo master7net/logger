@@ -36,11 +36,9 @@ public class Application implements CommandLineRunner {
         return new SimpleMongoDbFactory(new MongoClient(), "log");
     }
 
-
     @Bean
     public MongoOperations mongoOperations() throws Exception {
         MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory());
         return (MongoOperations) mongoTemplate;
     }
-
 }

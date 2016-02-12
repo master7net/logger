@@ -1,7 +1,7 @@
-package logcore.domain.throwables;
+package logcore.domain.log.throwables;
 
 
-import logcore.domain.throwables.stacktrace.StackTrace;
+import logcore.domain.log.throwables.stacktrace.StackTrace;
 
 import java.util.List;
 

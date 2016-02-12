@@ -1,7 +1,7 @@
-package logcore.domain;
+package logcore.domain.log;
 
-import logcore.domain.loggername.LoggerName;
-import logcore.domain.throwables.Throwables;
+import logcore.domain.log.loggername.LoggerName;
+import logcore.domain.log.throwables.Throwables;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

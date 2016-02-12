@@ -1,7 +1,7 @@
 package logcore.service;
 
 import logcore.dao.LoggerDAO;
-import logcore.domain.LoggerMessage;
+import logcore.domain.log.LoggerMessage;
 import logcore.dto.LoggerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

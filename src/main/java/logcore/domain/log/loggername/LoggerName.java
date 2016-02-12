@@ -1,9 +1,9 @@
-package logcore.domain.throwables.stacktrace.classname;
+package logcore.domain.log.loggername;
 
-public class ThrowClass {
+
+public class LoggerName {
 
     private String fullyQualifiedClassName;
-    private String className;
 
     public String getFullyQualifiedClassName() {
         return fullyQualifiedClassName;
@@ -11,13 +11,5 @@ public class ThrowClass {
 
     public void setFullyQualifiedClassName(String fullyQualifiedClassName) {
         this.fullyQualifiedClassName = fullyQualifiedClassName;
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
     }
 }

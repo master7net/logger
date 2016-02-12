@@ -1,6 +1,6 @@
-package logcore.domain.throwables.stacktrace;
+package logcore.domain.log.throwables.stacktrace;
 
-import logcore.domain.throwables.stacktrace.classname.ThrowClass;
+import logcore.domain.log.throwables.stacktrace.classname.ThrowClass;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 public class StackTrace {

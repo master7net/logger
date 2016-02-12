@@ -1,6 +1,6 @@
 package logcore.dao;
 
-import logcore.domain.LoggerMessage;
+import logcore.domain.log.LoggerMessage;
 import logcore.dto.LoggerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
