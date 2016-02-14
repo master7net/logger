@@ -4,7 +4,7 @@ appControllers.controller('LoginCtrl', ['$scope', '$http', '$mdToast', '$documen
             $scope.doLogin = function() {
                 $http({
                     method: 'POST',
-                    url: '/login',
+                    url: 'login',
                     data: 'username=' + $scope.username + '&password=' + $scope.password,
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).success(function (data) {

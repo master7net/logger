@@ -2,9 +2,10 @@ package logcore;
 
 import com.mongodb.MongoClient;
 import logcore.web.security.ApplicationSecurity;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.mongodb.MongoDbFactory;
@@ -16,15 +17,18 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @SpringBootApplication
 @PropertySource("classpath:app.properties")
-public class Application implements CommandLineRunner {
+public class Application extends SpringBootServletInitializer {
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(applicationClass, args);
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(applicationClass);
     }
+
+    private static Class<Application> applicationClass = Application.class;
 
     @Bean
     public WebSecurityConfigurerAdapter webSecurityConfigurerAdapter() {
@@ -33,7 +37,7 @@ public class Application implements CommandLineRunner {
 
     @Bean
     public MongoDbFactory mongoDbFactory() throws Exception {
-        return new SimpleMongoDbFactory(new MongoClient(), "log");
+        return new SimpleMongoDbFactory(new MongoClient(), "logdb");
     }
 
     @Bean
@@ -42,3 +46,4 @@ public class Application implements CommandLineRunner {
         return (MongoOperations) mongoTemplate;
     }
 }
+

@@ -34,7 +34,7 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
                 request.skip = $scope.skip;
 
                 $http({
-                    url: '/rest/log/',
+                    url: 'rest/log/',
                     method: "PUT",
                     data : request,
                         headers: {
@@ -140,6 +140,6 @@ appControllers.controller('ConsoleCtrl', ['$scope', '$http', '$interval',
             $scope.load();
         }
         $scope.exit = function() {
-            window.location.href = '/logout';
+            window.location.href = 'logout';
         }
 }]);
